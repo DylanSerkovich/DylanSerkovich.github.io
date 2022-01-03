@@ -37,7 +37,7 @@ body {
 header {
   width: 100%;
   height: 100vh;
-  background: url('assets/fondo2.jpg') center/cover;
+  background: url("assets/fondo2.jpg") center/cover;
 }
 
 .nav {
