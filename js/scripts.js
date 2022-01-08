@@ -84,3 +84,20 @@ if(!!localStorage.getItem('theme-mode')){
         ThemeMode(ButtonThemeActive,'dark');
     }
 }
+
+const maquina1= document.getElementById('machineTipe')
+const texto = maquina1.textContent ? maquina1.textContent : maquina1.innerText;
+
+const maquinaEscribir1 =( text ='',tiempo, etiqueta ='') =>{
+    let arrayCaracteres =text.split('')
+    etiqueta.innerHTML =''
+    let cont=0
+    let escribir = setInterval(function(){
+        etiqueta.innerHTML+=arrayCaracteres[cont]
+        cont++
+        if(cont===arrayCaracteres.length){
+            clearInterval(escribir)
+        }
+    },tiempo)
+}
+maquinaEscribir1(texto,120,maquina1)
