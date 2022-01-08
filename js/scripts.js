@@ -100,4 +100,8 @@ const maquinaEscribir1 =( text ='',tiempo, etiqueta ='') =>{
         }
     },tiempo)
 }
-maquinaEscribir1(texto,120,maquina1)
+
+window.addEventListener("load", function(){
+    maquinaEscribir1(texto,120,maquina1)
+});
+
