@@ -6,7 +6,7 @@
         "../scss/_variable.scss",
         "../scss/_nav-header.scss",
         "../scss/_mobil-parameters.scss",
-        "../scss/_contact.scss"
+        "../scss/sections/_contact.scss"
     ],
     "names": [],
     "file": "style.css"
