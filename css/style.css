@@ -318,7 +318,7 @@ header {
 .sectionHome__Photo {
   max-width: 80%;
   border-radius: 100%;
-  border: 3px solid #fff;
+  border: 3px solid rgba(255, 255, 255, 0.5);
 }
 
 .infoHome {
