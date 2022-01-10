@@ -338,8 +338,7 @@ header {
 }
 
 .infoHome__description {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 0 15px 0;
   text-align: justify;
   display: inline-block;
   font-size: calc(20px + (30 - 20) * ((100vw - 500px) / (1600 - 500)));
