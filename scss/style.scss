@@ -1,0 +1,14 @@
+
+@import '_variable';
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background: var(--bg-color);
+    transition: $trans-color;
+}
+
+@import '_nav-header';
+
+@import 'sections/_home';
+
+@import 'sections/_contact';
