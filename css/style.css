@@ -198,8 +198,11 @@ header {
 }
 
 .nav__item--active .nav__link {
-  color: #BFACB5;
-  /*gray*/
+  padding: 5px 10px;
+  background: #f3CA40;
+  /*#fff*/
+  color: #000;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 1024px) {
