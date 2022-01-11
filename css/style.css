@@ -5,9 +5,10 @@ html {
   --redes-letra-hover-color:#f4FFFD;
   --redes-shadow-color:rgba(0,0,0, .2);
   --redes-shadow-hover-color:rgba(0,0,0, .4);
-  --nav-color: #8CBDCF;
+  --nav-color: rgba(140,189,207,1);
+  --nav-color-D: rgba(36,81,103,1);
   --nav-letras-color:#23262D;
-  --nav-link-letra-hover-color:#fff;
+  --nav-link-letra-hover-color:#f4FFFD;
   --nav-logo-color:grey;
   scroll-behavior: smooth;
 }
@@ -15,12 +16,13 @@ html {
 html[data-theme='dark'] {
   --bg-color: #23262D;
   --redes-color: #f4FFFD;
-  --redes-letra-color:#333;
+  --redes-letra-color:#23262D;
   --redes-shadow-color:rgba(255, 255, 255, .2);
   --redes-shadow-hover-color:rgba(255, 255, 255, .4);
-  --nav-color: #245167;
+  --nav-color: rgba(36,81,103,1);
+  --nav-color-D: rgba(140,189,207,1);
   --nav-letras-color:#f4FFFD;
-  --nav-link-letra-hover-color:#000;
+  --nav-link-letra-hover-color:#23262D;
 }
 
 * {
@@ -185,7 +187,7 @@ header {
     padding: 5px 10px;
     background: #f3CA40;
     /*#fff*/
-    color: #000;
+    color: #23262D;
     border-radius: 15px;
   }
 }
@@ -227,7 +229,8 @@ header {
     left: 0;
     width: 300px;
     height: 100vh;
-    background: #5d5757;
+    background: -webkit-gradient(linear, left top, right top, from(var(--nav-color-D)), to(var(--nav-color)));
+    background: linear-gradient(90deg, var(--nav-color-D) 0%, var(--nav-color) 100%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
