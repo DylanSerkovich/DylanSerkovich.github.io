@@ -8,27 +8,27 @@ $theme-redes:(
 );
 
 html{
-    --bg-color: rgb(196, 196, 196);
-    --redes-color: #333;
+    --bg-color: #f4FFFD;
+    --redes-color: #23262D;
     --redes-letra-color:#fff;
-    --redes-letra-hover-color:#fff;
+    --redes-letra-hover-color:#f4FFFD;
     --redes-shadow-color:rgba(0,0,0, .2);
     --redes-shadow-hover-color:rgba(0,0,0, .4);
-    --nav-color: #fff;
-    --nav-letras-color:#000;
+    --nav-color: #8CBDCF;
+    --nav-letras-color:#23262D;
     --nav-link-letra-hover-color:#fff;
     --nav-logo-color:grey;
 	scroll-behavior: smooth;
 }
 
 html[data-theme='dark']{
-	--bg-color: #111111;
-    --redes-color: #fff;
+	--bg-color: #23262D;
+    --redes-color: #f4FFFD;
     --redes-letra-color:#333;
     --redes-shadow-color:rgba(255, 255, 255, .2);
     --redes-shadow-hover-color:rgba(255, 255, 255, .4);
-    --nav-color: #333;
-    --nav-letras-color:rgb(255,255,255);
+    --nav-color: #245167;
+    --nav-letras-color:#f4FFFD;
     --nav-link-letra-hover-color:#000;
 }
 
