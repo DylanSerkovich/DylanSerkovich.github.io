@@ -200,7 +200,6 @@ header {
 .nav__item--active .nav__link {
   padding: 5px 10px;
   background: #f3CA40;
-  /*#fff*/
   color: #000;
   border-radius: 15px;
 }
