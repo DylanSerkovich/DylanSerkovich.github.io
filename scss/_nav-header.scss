@@ -138,7 +138,7 @@ header{
     @media (hover: hover){
         &:hover{
             padding: 5px 10px;
-            background: #fff;
+            background: #f3CA40; /*#fff*/
             color: #000;
             border-radius: 15px;
         }
@@ -154,7 +154,7 @@ header{
 }
 
 .nav__item--active .nav__link{
-    color: gray;
+    color: #BFACB5; /*gray*/
 }
 
 @media screen and (max-width:$mode-cell){
