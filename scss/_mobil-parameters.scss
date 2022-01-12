@@ -14,15 +14,17 @@
     display: inline-block;
     width: 250px;
     padding: 10px 50px;
-    border-radius: 5px;
-    border: 5px solid #F4FFFD;
+    // border-radius: 5px;
+    border-top: 5px solid #F4FFFD;
+    border-bottom: 5px solid #F4FFFD;
+    background: rgba($color: #23262D, $alpha: 0.5);
     color: #f4FFFD;
 }
 
 .nav__link:active{
     background: #f24263;
     color: #f4FFFD;
-    border-radius: 5px;
+    // border-radius: 5px;
 }
 
 .nav__list{

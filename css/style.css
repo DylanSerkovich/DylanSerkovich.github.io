@@ -218,14 +218,14 @@ header {
     display: inline-block;
     width: 250px;
     padding: 10px 50px;
-    border-radius: 5px;
-    border: 5px solid #F4FFFD;
+    border-top: 5px solid #F4FFFD;
+    border-bottom: 5px solid #F4FFFD;
+    background: rgba(35, 38, 45, 0.5);
     color: #f4FFFD;
   }
   .nav__link:active {
     background: #f24263;
     color: #f4FFFD;
-    border-radius: 5px;
   }
   .nav__list {
     position: absolute;
