@@ -35,6 +35,9 @@ header{
             }
         }   
     }
+	&__link i{
+		margin: 0 5px;
+	}
 }
 
 @function texto3d($numero,$color){

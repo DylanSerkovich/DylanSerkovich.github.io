@@ -13,6 +13,10 @@ header{
     border-radius: 0;
 }
 
+.nav--active .nav__item--active .nav__link{
+    color: #f24263;
+}
+
 .nav__item{
     margin: 5px 0;
     text-align: center;

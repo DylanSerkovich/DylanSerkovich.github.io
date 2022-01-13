@@ -96,6 +96,10 @@ header {
   }
 }
 
+.nav__link i {
+  margin: 0 5px;
+}
+
 .nav__logo {
   text-shadow: 0.2px 0.2px var(--nav-logo-color), 1px 1px var(--nav-logo-color), 1.2px 1.2px var(--nav-logo-color), 1.4px 1.4px var(--nav-logo-color), 1.6px 1.6px var(--nav-logo-color);
   width: 100px;
@@ -226,6 +230,9 @@ header {
   }
   .nav--active {
     border-radius: 0;
+  }
+  .nav--active .nav__item--active .nav__link {
+    color: #f24263;
   }
   .nav__item {
     margin: 5px 0;
