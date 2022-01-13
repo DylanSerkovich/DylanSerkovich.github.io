@@ -76,8 +76,8 @@ header{
 .nav__theme{
     position: absolute;
     left: 9em;// left: 150px;
-    box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.5);
-    border-radius: 1000px;
+    // box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.5);
+    // border-radius: 1000px;
 }
 
 .checkTheme{
@@ -95,7 +95,7 @@ header{
 		width: 30px;
 		height: 30px;
 		position: absolute;
-		background: #F1F1F1;
+		background: var(--redes-letra-hover-color);
 		top: 0;
 		left: 0;
 		right: unset;
@@ -104,8 +104,8 @@ header{
 		box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
 	}
 	&--dark{
-		background: orange;
-		color: #000;
+		background: #f3CA40;
+		color: #23272E;
 		&::after{
 			right: 0;
 			left: unset;
@@ -117,7 +117,7 @@ header{
 		line-height: 30px;
 		display: block;
 		background: none;
-		color: #fff;
+		color: var(--redes-letra-hover-color);
 	}
 }
 //-----------------------------------------------------------------------

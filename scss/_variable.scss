@@ -9,6 +9,7 @@ $theme-redes:(
 
 html{
     --bg-color: #f4FFFD;
+    --scroll-color: 35, 39, 46;
     --redes-color: #23262D;
     --redes-letra-color:#fff;
     --redes-letra-hover-color:#f4FFFD;
@@ -24,6 +25,7 @@ html{
 
 html[data-theme='dark']{
 	--bg-color: #23262D;
+    --scroll-color: 244, 255, 253;
     --redes-color: #f4FFFD;
     --redes-letra-color:#23262D;
     --redes-shadow-color:rgba(255, 255, 255, .2);
