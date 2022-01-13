@@ -21,6 +21,7 @@ header{
         background: var(--nav-color);
 		box-shadow: 0px 3px 5px var(--redes-shadow-hover-color);
         padding: 15px;
+		border-radius: 0 0 10px 0;
 		
         & .nav__logo, .nav__link, .nav__menu{
             color: var(--nav-letras-color);

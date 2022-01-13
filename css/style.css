@@ -39,6 +39,19 @@ body {
   transition: all 0.5s ease;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #23262D;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(243, 202, 64, 0.7);
+  border-radius: 10px;
+  border-right: 1px solid #23262D;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 header {
   width: 100%;
   height: 100vh;
@@ -68,6 +81,7 @@ header {
   -webkit-box-shadow: 0px 3px 5px var(--redes-shadow-hover-color);
           box-shadow: 0px 3px 5px var(--redes-shadow-hover-color);
   padding: 15px;
+  border-radius: 0 0 10px 0;
 }
 
 .nav--active .nav__logo, .nav--active .nav__link, .nav--active .nav__menu {
@@ -208,6 +222,9 @@ header {
   }
   .nav__menu:active {
     color: gray;
+  }
+  .nav--active {
+    border-radius: 0;
   }
   .nav__item {
     margin: 5px 0;

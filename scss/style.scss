@@ -5,6 +5,16 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     background: var(--bg-color);
     transition: $trans-color;
+    &::-webkit-scrollbar{
+        width: 10px;
+        background: #23262D;
+        &-thumb{
+            background: rgba(#f3CA40, 0.7);
+            border-radius: 10px;
+            border-right: 1px solid #23262D;
+            transition: $trans-color;
+        }
+    }
 }
 
 @import '_nav-header';
