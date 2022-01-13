@@ -57,6 +57,7 @@ header {
   width: 100%;
   height: 100vh;
   background: url("../assets/images/fondo2.webp") center/cover;
+  border-radius: 0 0 20px 0;
 }
 
 .nav {
@@ -220,6 +221,9 @@ header {
   }
   .nav__menu:active {
     color: gray;
+  }
+  header {
+    border-radius: 0;
   }
   .nav--active {
     border-radius: 0;
