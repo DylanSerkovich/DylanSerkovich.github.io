@@ -234,9 +234,13 @@ header {
   .nav__list--active .nav__item--active .nav__link {
     color: #f24263;
   }
+  .nav__item:first-child {
+    border-top: 1px solid #F4FFFD;
+  }
   .nav__item {
-    margin: 5px 0;
-    text-align: center;
+    border-bottom: 1px solid #F4FFFD;
+    margin: 0;
+    text-align: left;
   }
   .nav--active .nav__link {
     color: #f4FFFD;
@@ -244,9 +248,7 @@ header {
   .nav__link {
     display: inline-block;
     width: 250px;
-    padding: 10px 50px;
-    border-top: 5px solid #F4FFFD;
-    border-bottom: 5px solid #F4FFFD;
+    padding: 15px 50px;
     background: rgba(35, 38, 45, 0.5);
   }
   .nav__link:active {
@@ -257,8 +259,9 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 250px;
     height: 100vh;
+    /*width:300px*/
     background: var(--nav-color);
     display: -webkit-box;
     display: -ms-flexbox;
