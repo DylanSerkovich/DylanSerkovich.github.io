@@ -7,7 +7,6 @@ html {
   --redes-shadow-color:rgba(0,0,0, .2);
   --redes-shadow-hover-color:rgba(0,0,0, .4);
   --nav-color: rgba(140,189,207,1);
-  --nav-color-D: rgba(36,81,103,1);
   --nav-letras-color:#23262D;
   --nav-link-letra-hover-color:#f4FFFD;
   --nav-logo-color:grey;
@@ -232,6 +231,9 @@ header {
     margin: 5px 0;
     text-align: center;
   }
+  .nav--active .nav__link {
+    color: #f4FFFD;
+  }
   .nav__link {
     display: inline-block;
     width: 250px;
@@ -239,7 +241,6 @@ header {
     border-top: 5px solid #F4FFFD;
     border-bottom: 5px solid #F4FFFD;
     background: rgba(35, 38, 45, 0.5);
-    color: #f4FFFD;
   }
   .nav__link:active {
     background: #f24263;
@@ -251,8 +252,7 @@ header {
     left: 0;
     width: 300px;
     height: 100vh;
-    background: -webkit-gradient(linear, left top, right top, from(var(--nav-color-D)), to(var(--nav-color)));
-    background: linear-gradient(90deg, var(--nav-color-D) 0%, var(--nav-color) 100%);
+    background: var(--nav-color);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
