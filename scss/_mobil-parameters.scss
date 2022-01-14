@@ -49,7 +49,7 @@ header{
 .nav__list{
     position: absolute;
         top: 0;     left: 0;
-        width: 250px; height: 100vh; /*width:300px*/
+        width: 251px; height: 100vh; /*width:300px*/
         background: var(--nav-color);
         display: flex;
         flex-direction: column;
@@ -59,6 +59,6 @@ header{
         transform: translateX(-100%);
         &--active{
             transform: translateX(0);
-            
+            box-shadow: 5px 0 10px rgba(var(--scroll-color), .6);
         }
 }
