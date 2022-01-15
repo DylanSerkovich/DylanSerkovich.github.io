@@ -17,11 +17,8 @@ header{
     color: #f24263;
 }
 
-.nav__item:first-child{
-    border-top: 1px solid #F4FFFD;
-}
 .nav__item{
-    border-bottom: 1px solid #F4FFFD;
+    border: 1px solid transparent;
     margin:0;
     text-align: left;
 }
@@ -34,10 +31,7 @@ header{
     display: inline-block;
     width: 250px;
     padding: 15px 50px;
-    // border-radius: 5px;
-    // border-top: 1px solid #F4FFFD;
-    
-    background: rgba($color: #23262D, $alpha: 0.5);
+    background: rgba($color: #23262D, $alpha: 0.3);
 }
 
 .nav__link:active{
