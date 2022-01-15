@@ -16,7 +16,8 @@
     &__Photo{
         max-width: 80%;
         border-radius: 100%;
-        border: 3px solid rgba(255, 255, 255, .5);
+        // border: 3px solid rgba(255, 255, 255, .5);
+        filter: drop-shadow(1vw 0px 0 rgba(#f3CA40, 0.7));
     }
 }
 
