@@ -1,4 +1,24 @@
-$trans-color: all 0.5s ease;        
+$trans-color: all 0.5s ease;  
+
+$mode-cell: 1024px;
+$mode-screen:$mode-cell+1;
+$mode-cell-grid: 731px;
+
+//Paleta de colores (valores RGB)
+$raisin-black:#23272E;
+$raisin-black-rgb:35, 39, 46;
+
+$mint-cream:#F4FFFD;
+$mint-cream-rgb:244, 255, 253;
+
+$blue-sapphire:#245167;
+
+$dark-sky-blue:#8CBDCF;
+
+$maize-crayola:#F3CA40;
+
+$cinnabar:#F24236;
+
 $theme-redes:(
     "facebook":#3b5998,
     "gmail": #c71610,
@@ -8,31 +28,21 @@ $theme-redes:(
 );
 
 html{
-    --bg-color: #f4FFFD;
-    --scroll-color: 35, 39, 46;
-    --redes-color: #23262D;
-    --redes-letra-color:#fff;
-    --redes-letra-hover-color:#f4FFFD;
-    --redes-shadow-color:rgba(0,0,0, .2);
-    --redes-shadow-hover-color:rgba(0,0,0, .4);
-    --nav-color: rgba(140,189,207,1);
-    --nav-letras-color:#23262D;
-    --nav-link-letra-hover-color:#f4FFFD;
+    --color-primario:#{$mint-cream};
+    --color-secundario:#{$raisin-black};
+    --color-secundario-rgb:#{$raisin-black-rgb};
+    --nav-color: #{$dark-sky-blue};
+    --blue-opuesto: #{$blue-sapphire};
     --nav-logo-color:grey;
 	scroll-behavior: smooth;
 }
 
 html[data-theme='dark']{
-	--bg-color: #23262D;
-    --scroll-color: 244, 255, 253;
-    --redes-color: #f4FFFD;
-    --redes-letra-color:#23262D;
-    --redes-shadow-color:rgba(255, 255, 255, .2);
-    --redes-shadow-hover-color:rgba(255, 255, 255, .4);
-    --nav-color: rgba(36,81,103,1);
-    --nav-color-D: rgba(140,189,207,1);
-    --nav-letras-color:#f4FFFD;
-    --nav-link-letra-hover-color:#23262D;
+    --color-primario:#{$raisin-black};
+    --color-secundario:#{$mint-cream};
+    --color-secundario-rgb:#{$mint-cream-rgb};
+    --nav-color: #{$blue-sapphire};
+    --blue-opuesto: #{$dark-sky-blue};
 }
 
   *{

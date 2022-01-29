@@ -3,6 +3,20 @@ const menu_btn = document.querySelector('.nav__menu'); //boton
 const menu = document.querySelector('.nav__list'); //ul
 const secciones = document.querySelectorAll('section'); //secciones
 
+const flagsElement =document.getElementById('flags');
+const textsToChange = document.querySelectorAll("[data-section]");
+let idioma = window.navigator.language || navigator.userLanguage || navigator.browserLanguage;
+
+const btnSwitch = document.querySelector('#checkTheme');
+let ButtonThemeActive=()=>btnSwitch.classList.toggle('checkTheme--dark');
+let ButtonThemeDesactive=()=>btnSwitch.classList.remove('checkTheme--dark');
+
+const maquina1= document.getElementById('machineTipe')
+
+// const texto = maquina1.textContent ? maquina1.textContent : maquina1.innerText;
+
+const enlace= document.querySelector('.redeslist__link--gmail');
+
     window.addEventListener('scroll',function(){
         nav.classList.toggle('nav--active',window.scrollY >0)
     })
@@ -51,13 +65,71 @@ function interseccionHandler(entrada){
     }
 }
 
+
+const FlagsContainer = document.querySelector(".flags");
+
+function StylesFalgs(left,opacity){
+    FlagsContainer.style.left=left;
+    FlagsContainer.style.opacity=opacity;
+}
+//Funcion para maquina de escribir
+let maquinaEscribir1 =( text ='',tiempo, etiqueta ='') =>{
+    let arrayCaracteres =text.split('')
+    etiqueta.innerHTML =''
+    // maquina1.innerHTML ="";
+    let cont=0;
+    let escribir = setInterval(function(){
+        etiqueta.innerHTML+=arrayCaracteres[cont]
+        cont++
+        if(cont===arrayCaracteres.length){
+            clearInterval(escribir)
+            StylesFalgs("15em","1");
+        }
+    },tiempo)
+    
+}
+
+// window.addEventListener("load", function(){
+//     maquinaEscribir1(texto,120,maquina1)
+// });
+
+//Codigo Idiomas
+
+
+
+const changeLanguage = async (language) =>{
+    const requestJson = await fetch(`./languages/${language}.json`)
+    const texts = await requestJson.json();
+    
+    localStorage.setItem('language',language);
+
+    for(const textToChange of textsToChange){
+        const section =textToChange.dataset.section;
+        const value =textToChange.dataset.value;
+        
+        textToChange.innerHTML = texts[section][value];
+    }
+    const texto = maquina1.textContent ? maquina1.textContent : maquina1.innerText;
+    maquinaEscribir1(texto,120,maquina1);
+};
+
+flagsElement.addEventListener('click', (e)=>{
+    StylesFalgs("-30px","0");
+    changeLanguage(e.target.parentElement.dataset.language);
+});
+
+if(!!localStorage.getItem('language')){
+    changeLanguage(localStorage.getItem('language'))
+}else{
+    if(idioma.slice(0,2)==='en'||idioma.slice(0,2)==='es'){
+        changeLanguage(idioma.slice(0,2));
+    }else{
+        changeLanguage('es');
+    }
+    
+}
+
 //Codigo Modo Oscuro
-
-const btnSwitch = document.querySelector('#checkTheme');
-
-let ButtonThemeActive=()=>btnSwitch.classList.toggle('checkTheme--dark');
-
-let ButtonThemeDesactive=()=>btnSwitch.classList.remove('checkTheme--dark');
 
 function ThemeMode(buttonBehaviur,theme){
     document.documentElement.setAttribute('data-theme',theme);
@@ -73,35 +145,23 @@ btnSwitch.addEventListener('click', () => {
     }
 });
 
-if(!!localStorage.getItem('theme-mode')){
-    if(localStorage.getItem('theme-mode') === 'dark'){
-        ThemeMode(ButtonThemeActive,'dark');  
-    }else{
-        ThemeMode(ButtonThemeDesactive,'light'); 
-    }
-}else{
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        ThemeMode(ButtonThemeActive,'dark');
-    }
-}
+document.addEventListener("DOMContentLoaded", function(){
 
-const maquina1= document.getElementById('machineTipe')
-const texto = maquina1.textContent ? maquina1.textContent : maquina1.innerText;
-
-const maquinaEscribir1 =( text ='',tiempo, etiqueta ='') =>{
-    let arrayCaracteres =text.split('')
-    etiqueta.innerHTML =''
-    let cont=0
-    let escribir = setInterval(function(){
-        etiqueta.innerHTML+=arrayCaracteres[cont]
-        cont++
-        if(cont===arrayCaracteres.length){
-            clearInterval(escribir)
+    if(!!localStorage.getItem('theme-mode')){
+        if(localStorage.getItem('theme-mode') === 'dark'){
+            ThemeMode(ButtonThemeActive,'dark');  
+        }else{
+            ThemeMode(ButtonThemeDesactive,'light'); 
         }
-    },tiempo)
-}
+    }else{
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            ThemeMode(ButtonThemeActive,'dark');
+        }
+    }
 
-window.addEventListener("load", function(){
-    maquinaEscribir1(texto,120,maquina1)
 });
 
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    enlace.href="mailto:diland0206@gmail.com";
+}

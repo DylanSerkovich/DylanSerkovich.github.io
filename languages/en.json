@@ -1,0 +1,11 @@
+{
+    "home":{
+        "title":"I'm Dilam Chuquilin",
+        "description":"Student and programmer with a hunger for knowledge and experience, constantly improving my skills with the goal of becoming a Senior developer."
+    },
+
+    "about":{
+        "description":"My name is Dilam Anderson, a Systems Engineering student, a Full Stack developer with experience creating websites and desktop applications. I specialize in Java and JavaScript; I also have extensive experience in the area of ​​graphic design and editing.<br> Always in the constant search to polish my skills and continue to grow as a professional to present valuable contributions to the work group of which I am a part.",
+        "download": "Download"
+    }
+}

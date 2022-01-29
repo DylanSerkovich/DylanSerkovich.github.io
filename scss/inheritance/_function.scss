@@ -1,0 +1,14 @@
+@function SizeCalc($minSize,$maxSize,$widthMin){
+    $calculo:'calc(#{$minSize}px + (#{$maxSize} - #{$minSize}) * ((100vw - #{$widthMin}px) / (1600 - #{$widthMin})))';
+    @return unquote($calculo);
+  }
+  
+@function texto3d($numero,$color){
+	$text-shadow: 0.2px 0.2px #{$color};/*#ADAABF*/
+	$i:1;
+	@while $i<=$numero{
+		$text-shadow: '#{$text-shadow}, #{$i}px #{$i}px #{$color}';
+		$i: $i + 0.2;
+	}
+	@return unquote($text-shadow);
+}

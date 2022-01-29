@@ -41,6 +41,14 @@
                     <span class="checkTheme__icon"><i class="fas fa-moon"></i></span>
                 </button>
             </div>
+            <div id="flags" class="flags">
+                <div class="flags__item" data-language="es">
+                    <img class="flags__img" src="assets/icon/es.svg" alt="">
+                </div>
+                <div class="flags__item" data-language="en">
+                    <img class="flags__img" src="assets/icon/en.svg" alt="">
+                </div>
+            </div>
             <ul class="nav__list">
                 <li class="nav__item" data-ref="home">
                     <a class="nav__link" href="#home"><i class="fas fa-home"></i>Home</a>
@@ -63,10 +71,10 @@
             </div>
         </nav>
         
-        <div class="sectionHome">
+        <div class="gridblock sectionHome">
             <div class="infoHome">
-                <h1 class="infoHome__title" id="machineTipe">I'm Dilam Chuquilin</h1>
-                <p class="infoHome__description">Student and programmer with a hunger for knowledge and experience, constantly improving my skills with the goal of becoming a Senior developer.</p>
+                <h1 class="infoHome__title" id="machineTipe" data-section="home" data-value="title"></h1>
+                <p class="infoHome__description" data-section="home" data-value="description">Student and programmer with a hunger for knowledge and experience, constantly improving my skills with the goal of becoming a Senior developer.</p>
             </div>
             <img class="sectionHome__Photo" src="assets/images/Foto_dilam.webp" alt="Dilam_Chuquilin">
         </div>
@@ -76,11 +84,21 @@
     </section>
     <main>
     <div class="secciones">
-		<section class="seccion" id="about">
-			<div class="card">
-				<h1>About</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ante mattis, lacinia arcu nec, consequat massa. Aliquam faucibus quam eget justo posuere vehicula. Donec ac fermentum dolor, rhoncus congue sapien. Maecenas lacinia tellus nec turpis tempor pellentesque. Praesent in erat a nisl viverra dapibus. Pellentesque feugiat dolor quis sapien rutrum, sed placerat est volutpat. Curabitur sed convallis lacus, vel molestie ante. </p>
-			</div>
+		<section class="about-section" id="about">
+            <h1 class="about__title">About me</h1>
+            <div class="gridblock about__container">
+                <img class="about__img" src="assets/images/Dilam_about.webp" alt="Dilam_Anderson">
+                <div class="about__info">
+                    <p class="about__description" data-section="about" data-value="description">My name is Dilam Anderson, a Systems Engineering student, a Full Stack developer with experience creating websites and desktop applications. I specialize in Java and JavpaScript; I also have extensive experience in the area of ​​graphic design and editing.<br> Always in the constant search to polish my skills and continue to grow as a professional to present valuable contributions to the work group of which I am a part.</p>
+                    <a class="pdfLink" href="assets/download/Chuquilin_Dilam_CV.pdf" target="_blank">
+                    <button class="button">
+                        
+                        <i class="fas fa-file-download icon"></i>
+                        <span class="button__description" data-section="about" data-value="download">Download CV</span>
+                    </button> 
+                </a>
+                </div>
+            </div>
 		</section>
 
 		<section class="seccion" id="skills">
@@ -121,7 +139,7 @@
                         </a>
                     </li>
                     <li class="redeslist__item">
-                        <a href="#" class="redeslist__link redeslist__link--gmail">
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=diland0206@gmail.com&tf=cm" target="_blank" class="redeslist__link redeslist__link--gmail">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </li>

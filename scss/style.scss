@@ -1,24 +1,30 @@
 
 @import '_variable';
-
+@import 'inheritance/_function';
+@import 'inheritance/_grid';
 body{
     font-family: 'Roboto Condensed', sans-serif;
-    background: var(--bg-color);
+    background: var(--color-primario);
     transition: $trans-color;
-    &::-webkit-scrollbar{
-        width: 10px;
-        background: var(--bg-color);
-        &-thumb{
-            background: rgba(var(--scroll-color), 0.7);
-            border-radius: 10px;
-            transition: $trans-color;
-        }
-    }
+    // &::-webkit-scrollbar{
+    //     width: 10px;
+    //     background: var(--bg-color);
+    //     &-thumb{
+    //         background: rgba(var(--scroll-color), 0.7);
+    //         border-radius: 10px;
+    //         transition: $trans-color
+    //     }
+    // }
 }
 
 
-@import '_nav-header';
+@import 'parts/_nav-header';
 
 @import 'sections/_home';
 
+@import 'sections/_about';
+
 @import 'sections/_contact';
+
+@import '_mobil-parameters';
+

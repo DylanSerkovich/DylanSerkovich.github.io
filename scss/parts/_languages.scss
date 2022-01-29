@@ -1,0 +1,21 @@
+.flags{
+    position: fixed;
+    width: 75px;
+    display: flex;
+    // left: 15em;
+    left: -30px;
+    opacity: 0;
+    // transform: translate(-50%);
+    align-items: center;
+    justify-content: space-between;
+    transition: $trans-color;
+    
+    &__item{
+        width: 30px;
+    }
+
+    &__img{
+        display: block;
+        cursor: pointer;
+    }
+}
