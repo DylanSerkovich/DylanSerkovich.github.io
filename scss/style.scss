@@ -2,9 +2,12 @@
 @import '_variable';
 @import 'inheritance/_function';
 @import 'inheritance/_grid';
+@import 'inheritance/_text';
+
 body{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: var(--color-primario);
+    color: var(--color-secundario);
     transition: $trans-color;
     // &::-webkit-scrollbar{
     //     width: 10px;
@@ -24,7 +27,11 @@ body{
 
 @import 'sections/_about';
 
+@import 'sections/_skills';
+
 @import 'sections/_contact';
+
+@import 'sections/_portafolio';
 
 @import '_mobil-parameters';
 

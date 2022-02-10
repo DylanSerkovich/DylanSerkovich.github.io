@@ -1,6 +1,7 @@
 @media screen and (max-width:$mode-cell){
     // @import '_mobil-parameters';
     @include navMovile;
+    @include SectionAbout;
 }
 
 @media screen and (max-width:$mode-cell-grid){
@@ -8,4 +9,5 @@
 }
 
 //Priority
-@include NavItemActive
+@include NavItemActive;
+

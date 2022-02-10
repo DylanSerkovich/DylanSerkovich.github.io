@@ -5,15 +5,11 @@ const secciones = document.querySelectorAll('section'); //secciones
 
 const flagsElement =document.getElementById('flags');
 const textsToChange = document.querySelectorAll("[data-section]");
-let idioma = window.navigator.language || navigator.userLanguage || navigator.browserLanguage;
+let idioma = (window.navigator.language || navigator.userLanguage || navigator.browserLanguage).slice(0,2);
+const idiomas=['es','en'];
+const LanguageStatus =localStorage.getItem('language');
 
 const btnSwitch = document.querySelector('#checkTheme');
-let ButtonThemeActive=()=>btnSwitch.classList.toggle('checkTheme--dark');
-let ButtonThemeDesactive=()=>btnSwitch.classList.remove('checkTheme--dark');
-
-const maquina1= document.getElementById('machineTipe')
-
-// const texto = maquina1.textContent ? maquina1.textContent : maquina1.innerText;
 
 const enlace= document.querySelector('.redeslist__link--gmail');
 
@@ -65,71 +61,32 @@ function interseccionHandler(entrada){
     }
 }
 
-
 const FlagsContainer = document.querySelector(".flags");
 
-function StylesFalgs(left,opacity){
-    FlagsContainer.style.left=left;
-    FlagsContainer.style.opacity=opacity;
-}
-//Funcion para maquina de escribir
-let maquinaEscribir1 =( text ='',tiempo, etiqueta ='') =>{
-    let arrayCaracteres =text.split('')
-    etiqueta.innerHTML =''
-    // maquina1.innerHTML ="";
-    let cont=0;
-    let escribir = setInterval(function(){
-        etiqueta.innerHTML+=arrayCaracteres[cont]
-        cont++
-        if(cont===arrayCaracteres.length){
-            clearInterval(escribir)
-            StylesFalgs("15em","1");
-        }
-    },tiempo)
-    
-}
-
-// window.addEventListener("load", function(){
-//     maquinaEscribir1(texto,120,maquina1)
-// });
-
 //Codigo Idiomas
-
-
-
 const changeLanguage = async (language) =>{
     const requestJson = await fetch(`./languages/${language}.json`)
     const texts = await requestJson.json();
     
     localStorage.setItem('language',language);
-
     for(const textToChange of textsToChange){
         const section =textToChange.dataset.section;
         const value =textToChange.dataset.value;
-        
         textToChange.innerHTML = texts[section][value];
     }
-    const texto = maquina1.textContent ? maquina1.textContent : maquina1.innerText;
-    maquinaEscribir1(texto,120,maquina1);
 };
 
 flagsElement.addEventListener('click', (e)=>{
-    StylesFalgs("-30px","0");
-    changeLanguage(e.target.parentElement.dataset.language);
+    if(!(localStorage.getItem('language')===e.target.parentElement.dataset.language)){
+        changeLanguage(e.target.parentElement.dataset.language);
+    }
 });
 
-if(!!localStorage.getItem('language')){
-    changeLanguage(localStorage.getItem('language'))
-}else{
-    if(idioma.slice(0,2)==='en'||idioma.slice(0,2)==='es'){
-        changeLanguage(idioma.slice(0,2));
-    }else{
-        changeLanguage('es');
-    }
-    
-}
-
 //Codigo Modo Oscuro
+let ButtonThemeActive=()=>btnSwitch.classList.toggle('checkTheme--dark');
+let ButtonThemeDesactive=()=>btnSwitch.classList.remove('checkTheme--dark');
+
+const ThemeOptions={'dark':  () => ThemeMode(ButtonThemeActive,'dark'),'light': () => ThemeMode(ButtonThemeDesactive,'light'), null: ()=> AddNavigatorTheme()}
 
 function ThemeMode(buttonBehaviur,theme){
     document.documentElement.setAttribute('data-theme',theme);
@@ -138,27 +95,21 @@ function ThemeMode(buttonBehaviur,theme){
 }
 
 btnSwitch.addEventListener('click', () => {
-    if(document.documentElement.getAttribute('data-theme')==='dark'){
-        ThemeMode(ButtonThemeDesactive,'light');
-    }else{
-        ThemeMode(ButtonThemeActive,'dark');
-    }
+    (document.documentElement.getAttribute('data-theme')==='dark') ? ThemeOptions['light'](): ThemeOptions['dark']();
 });
 
+function AddNavigatorTheme(){
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ThemeOptions['dark']()
+}
+
+const LanguageNav= (idiomas.includes(idioma))? idioma: 'en';
+
 document.addEventListener("DOMContentLoaded", function(){
+    let ThemeStatus = localStorage.getItem('theme-mode');
+    ThemeOptions[ThemeStatus]();
 
-    if(!!localStorage.getItem('theme-mode')){
-        if(localStorage.getItem('theme-mode') === 'dark'){
-            ThemeMode(ButtonThemeActive,'dark');  
-        }else{
-            ThemeMode(ButtonThemeDesactive,'light'); 
-        }
-    }else{
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            ThemeMode(ButtonThemeActive,'dark');
-        }
-    }
-
+    (!!LanguageStatus)? changeLanguage(LanguageStatus): changeLanguage(LanguageNav);
 });
 
 

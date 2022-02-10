@@ -1,0 +1,19 @@
+.paragraph{
+    font-size: SizeCalc(20,30,500);
+    text-align: justify;
+}
+
+.title{
+    position: relative;
+    left: 5%;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: SizeCalc(40,60,500);
+  // font-size: calc(40px + (60 - 40) * ((100vw - 500px) / (1600 - 500)));
+    color: #f24263;
+}
+
+.section {
+  padding-top: 80px;
+  height: 100vh;
+}

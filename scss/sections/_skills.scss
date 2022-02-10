@@ -1,0 +1,55 @@
+.skill__container{
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill__item{
+    margin: 10px;
+    flex-grow: 1;
+}
+.section--skill{
+    height: auto;
+}
+.skill__title{
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.skill__img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    --medidas: #{SizeCalc(140,180,500)};
+    width: var(--medidas);
+    height: var(--medidas);
+    // width: 180px;
+    // height: 180px;
+    
+}
+
+.skill__logo{
+    margin: auto;
+    display: block;
+    width: SizeCalc(110,120,500);
+    filter: drop-shadow(0 0 10px rgba(var(--color-secundario-rgb), 0.4))
+    // width: 150px;
+}
+
+.skill__logo--java{
+    width: SizeCalc(90,110,500);
+}
+
+.skill__name{
+    background: $cinnabar;
+    margin:0 auto;
+    width: 150px;
+    padding: 6px;
+    border-radius: 10px;
+    height: 30px;
+    display:block;
+    font-weight: 700;
+    text-align: center;
+    justify-items: center;
+}

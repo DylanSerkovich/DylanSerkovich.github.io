@@ -23,21 +23,31 @@
     backdrop-filter: blur(50px);
 
     &__title{
-        display: inline-block; 
-        height:  1em;
+        display: inline-block;
+        margin: 20px 0;
+        height:  1.3em;
+        white-space: nowrap; //agregado
+        width: 16ch;
         font-size: calc(40px + (55 - 40) * ((100vw - 700px) / (1600 - 700)));
         border-right: 3px solid $mint-cream ;
-        animation: blink .5s infinite step-end 2s alternate;
+        animation: typing 2.5s steps(16), blink .5s infinite step-end alternate; //agregado
+        // animation: blink .5s infinite step-end 2s alternate;
+        overflow: hidden; //agregado
     }
 
     &__description{
         display: inline-block;
         margin: 0 15px 5% 15px; 
-        text-align: justify;
-        font-size: calc(20px + (30 - 20) * ((100vw - 500px) / (1600 - 500)));
+        // text-align: justify;
+        // font-size: calc(20px + (30 - 20) * ((100vw - 500px) / (1600 - 500)));
     }
+}
+
+@keyframes typing{
+    from {width: 0}
 }
 
 @keyframes blink{
     50% {border-color: transparent}
 }
+

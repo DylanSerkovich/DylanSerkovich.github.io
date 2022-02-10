@@ -3,13 +3,15 @@
   max-width: 90%;
   min-width: 90%;
   margin: 0px auto;
-  height: 60%;
+  height: auto;
+  // height: 60%;
   // extend .gridblock
 }
 
-.about-section {
-  padding-top: 25px;
-  height: 100vh;
+@mixin SectionAbout {
+  .section{
+    height: auto;
+  }
 }
 
 .about__img {
@@ -25,32 +27,20 @@
 .about__info {
   margin-top: 20px;
   font-weight: bold;
-  font-size: SizeCalc(20,30,500);
-  // font-size: calc(20px + (30 - 20) * ((100vw - 500px) / (1600 - 500)));
+}
+
+.about__description{
   line-height: 1.5em;
-  text-align: justify;
-  color: var(--color-secundario);
-  transition: $trans-color;
 }
 
 .about__title {
-  position: relative;
   left: 5%;
-  display: inline-block;
-  margin-bottom: 30px;
-  font-size: SizeCalc(40,60,500);
-  // font-size: calc(40px + (60 - 40) * ((100vw - 500px) / (1600 - 500)));
-  color: #f24263;
 }
-
-// @function SizeCalc($minSize, $maxSize, $widthMin){
-
-// }
 
 .button {
   position: relative;
   display: inline-flex;
-  width: SizeCalc(200,300,500);
+  width: SizeCalc(200,280,500);
   // width: calc(200px + (300 - 200) * ((100vw - 500px) / (1600 - 500)));
   height: SizeCalc(60,80,500);
   // height: calc(60px + (80 - 60) * ((100vw - 500px) / (1600 - 500)));
@@ -58,14 +48,16 @@
   overflow: hidden;
   align-items: center;
   // justify-content: center;
-  font-family: 'Roboto', sans-serif;
+  // font: italic 900 20px 'Roboto',sans-serif;
+  // font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 900;
   text-transform: uppercase;
   color: var(--color-primario);
   background: var(--color-secundario);
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: .3s ease all;
   cursor: pointer;
 }
@@ -75,7 +67,7 @@
   width: 200px;
 	position: absolute;
 	left: 50%; //30
-    font-size: SizeCalc(14,19,700);
+  font-size: SizeCalc(14,19,700);
   // font-size: calc(14px + (19 - 14) * ((100vw - 700px) / (1600 - 700)));
 	transition: .4s ease-in-out all;
   transform:translate(-50%);
@@ -112,7 +104,7 @@
 }
 
 @mixin aboutM {
-  .about__info{
+  .about__description{
     text-align: center;
   }
 }

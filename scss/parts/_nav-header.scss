@@ -53,6 +53,7 @@ header{
 }
 
 .nav__logo{
+	display: block;
 	width: 100px;
     font-size: 25px;
 	text-shadow: texto3d(1.6,var(--nav-logo-color));
@@ -68,12 +69,10 @@ header{
 
 	&::before{
 		font-size: 30px;
-		font-weight: bold;
 		content: "<";
 	}
 
 	&::after{
-		font-weight: bold;
 		font-size: 30px;
 		content: ">";
 	}
