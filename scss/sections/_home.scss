@@ -30,7 +30,7 @@
         width: 16ch;
         font-size: calc(40px + (55 - 40) * ((100vw - 700px) / (1600 - 700)));
         border-right: 3px solid $mint-cream ;
-        animation: typing 2.5s steps(16), blink .5s infinite step-end alternate; //agregado
+        animation: typing 2.5s steps(19), blink .5s infinite step-end alternate; //agregado
         // animation: blink .5s infinite step-end 2s alternate;
         overflow: hidden; //agregado
     }
