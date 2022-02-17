@@ -54,14 +54,14 @@ function interseccionHandler(entrada){
     const shouldbeActive =document.querySelector(".nav__list [data-ref=" + id +"]");
 
     if (currentlyActive) {
-        currentlyActive.classList.remove("nav__item--active");
+        currentlyActive.classList.remove('nav__item--active');
       }
     if (shouldbeActive) {
-        shouldbeActive.classList.add("nav__item--active");
+        shouldbeActive.classList.add('nav__item--active');
     }
 }
 
-const FlagsContainer = document.querySelector(".flags");
+const FlagsContainer = document.querySelector('.flags');
 
 //Codigo Idiomas
 const changeLanguage = async (language) =>{
@@ -105,7 +105,7 @@ function AddNavigatorTheme(){
 
 const LanguageNav= (idiomas.includes(idioma))? idioma: 'en';
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener('DOMContentLoaded', function(){
     let ThemeStatus = localStorage.getItem('theme-mode');
     ThemeOptions[ThemeStatus]();
 

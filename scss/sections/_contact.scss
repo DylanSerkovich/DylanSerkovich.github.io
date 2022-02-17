@@ -1,6 +1,21 @@
+
+.list-social{
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+// @media screen and(max-width: 992px) 
+// {
+//     .list-social{
+//         margin-top: 100px;
+//     }
+   
+// }
+
 .blockContac{
     display: flex;
-    height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
 }

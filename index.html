@@ -160,7 +160,7 @@
 
 		<section class="section" id="portafolio">
 			
-				<h2 class="title">Portafolio</h2>
+				<h2 class="title ">Portafolio</h2>
                 <div class="project"> 
 
                     <div class="project__item">
@@ -195,36 +195,107 @@
 			
 		</section>
 
-		<section class="seccion" id="contact">
-			<div class="blockContac">
-                <ul class="redeslist">
-                    <li class="redeslist__item">
-                        <a href="https://www.facebook.com/dchuquilin" target="_blank" class="redeslist__link redeslist__link--facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="redeslist__item">
-                        <a href="#" class="redeslist__link redeslist__link--linkedin">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li class="redeslist__item">
-                        <a href="#" class="redeslist__link redeslist__link--twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="redeslist__item">
-                        <a href="https://www.instagram.com/invites/contact/?i=6pvka2is1quf&utm_content=34marhu" target="_blank" class="redeslist__link redeslist__link--instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="redeslist__item">
-                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=diland0206@gmail.com&tf=cm" target="_blank" class="redeslist__link redeslist__link--gmail">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+		<section class="section" id="contact">
+            
+                <!-- <div class="container"> -->
+                <div class="form__contact">
+                    <!-- <h2 class="text-left" style="color: #f3f3f3">Contactame</h2> -->
+                    <h2 class="title skill__title">Contactame</h2>
+                     <!-- <div class="row"> -->
+
+                        <!-- <div class="col-md-12"> -->
+                        <div class="col-md-12">
+                            <!-- <form class="formu" method="post" action="enviarcorreo.php"> -->
+                            <form class="formu" method="post" action="correo.php">
+                                <!-- <ul class="contact-form"> -->
+                                <ul class="contact-form">
+                                    <li>
+                                        <!-- <div class="col-md-6"> -->
+                                        <div class="col-md-6 margin__input">
+                                            <!-- <input name="nombre" placeholder="Escribe tu nombre" required="required" size="8" type="text" /> -->
+                                            <input class="form__dato" name="nombre" placeholder="Escribe tu nombre" required="required" size="8" type="text" />
+                                        </div>
+                                        <!-- <div class="col-md-6"> -->
+                                        <div class="col-md-6 margin__input">
+                                            <!-- <input name="email" placeholder="Email" required="required" size="8" type="email" /> -->
+                                            <input class="form__dato" name="email" placeholder="Email" required="required" size="8" type="email" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- <div class="col-md-6"> -->
+                                        <div class=" col-md-6 margin__input">
+                                            <!-- <input name="telefono" placeholder="Escribe tu numero" required="required" size="8" type="text" /> -->
+                                            <input class="form__dato" name="telefono" placeholder="Escribe tu numero" required="required" size="9" type="tel" />
+                                        </div>
+                                        <!-- <div class="col-md-6"> -->
+                                        <div class="col-md-6 margin__input">
+                                            <!-- <input name="compañia" placeholder="Companía/Agencia" required="required" size="8" type="text" /> -->
+                                            <input class="form__dato" name="compañia" placeholder="Companía/Agencia" required="required" size="8" type="text" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- <div class="col-md-12"> -->
+                                        <div class="col-md-12 margin__input">
+                                            <!-- <input name="asunto" placeholder="Asunto" required="required" size="8" type="text" /> -->
+                                            <input class="form__dato" name="asunto" placeholder="Asunto" required="required" size="8" type="text" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- <div class="col-md-12"> -->
+                                        <div class="col-md-12 margin__input">
+                                            <!-- <textarea class="span12" name="mensaje" placeholder="Escribe tu proyecto o mensaje" required="required"></textarea> -->
+                                            <textarea class="form__msg" name="mensaje" placeholder="Escribe tu proyecto o mensaje" required="required"></textarea>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- <div class="col-md-12"> -->
+                                        <div class="col-md-12 margin__input">
+                                            <!-- <button type="submit"> -->
+                                            <button class="form__btn" type="submit">
+                                                Enviar mensaje
+                                                <i class="fas fa-chevron-right btn__icon"></i>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+
+                         </div>
+                </div>
+
+
+                <div class="list-social">
+                    <div class="blockContac">
+                        <ul class="redeslist">
+                            <li class="redeslist__item">
+                                <a href="https://www.facebook.com/dchuquilin" target="_blank" class="redeslist__link redeslist__link--facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="redeslist__item">
+                                <a href="#" class="redeslist__link redeslist__link--linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li class="redeslist__item">
+                                <a href="#" class="redeslist__link redeslist__link--twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="redeslist__item">
+                                <a href="https://www.instagram.com/invites/contact/?i=6pvka2is1quf&utm_content=34marhu" target="_blank" class="redeslist__link redeslist__link--instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="redeslist__item">
+                                <a href="https://mail.google.com/mail/u/0/?fs=1&to=diland0206@gmail.com&tf=cm" target="_blank" class="redeslist__link redeslist__link--gmail">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
 		</section>
 
 	</div>
