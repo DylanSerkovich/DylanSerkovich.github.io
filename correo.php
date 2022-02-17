@@ -1,6 +1,6 @@
 <?php
 
-$destino = "diland0206@gmail.com";
+$destino = "dilandgame@gmail.com";
 
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
@@ -15,3 +15,4 @@ $mensajeCompleto = "\n Nombre:" . $nombre . "\n" . "Email:" . $email . "\n" . "T
 mail($destino, $asunto, $mensajeCompleto, $header);
 
 header('Location: index.html');
+?>
