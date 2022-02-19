@@ -113,6 +113,37 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    enlace.href="mailto:diland0206@gmail.com";
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+//     enlace.href="mailto:diland0206@gmail.com";
+// }
+
+const $form = document.querySelector('#form');
+
+$form.addEventListener('submit',handleSubmit);
+
+async function handleSubmit(event){
+    event.preventDefault();
+    const form = new FormData(this);
+    const response = await fetch(this.action,{
+        method: this.method,
+        body: form,
+        headers:{
+            'Accept': 'application/json'
+        }
+    })
+    if(response.ok){
+        this.reset();
+        Swal.fire({
+            toast: true,
+            icon: 'success',
+            iconColor: '#F24236',
+            title: '<center>Mensaje enviado</center><center>¡Le contestaremos pronto!</center>',
+            animation: false,
+            background: '#F3CA40',
+            position: 'top-right',
+            color:'#23272E',
+            showConfirmButton: false,
+            timer: 2500,
+          })
+    }
 }

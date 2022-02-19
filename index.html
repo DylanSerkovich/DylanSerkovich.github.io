@@ -196,70 +196,47 @@
 		</section>
 
 		<section class="section" id="contact">
-            
-                <!-- <div class="container"> -->
                 <div class="form__contact">
-                    <!-- <h2 class="text-left" style="color: #f3f3f3">Contactame</h2> -->
                     <h2 class="title skill__title">Contactame</h2>
-                     <!-- <div class="row"> -->
-
-                        <!-- <div class="col-md-12"> -->
                         <div class="col-md-12">
-                            <!-- <form class="formu" method="post" action="enviarcorreo.php"> -->
-                            <form class="formu" method="post" action="">
-                                <!-- <ul class="contact-form"> -->
+                            <form id="form" class="formu" method="post" action="https://formspree.io/f/mbjwoyyp">
                                 <ul class="contact-form">
                                     <li>
-                                        <!-- <div class="col-md-6"> -->
                                         <div class="col-md-6 margin__input">
-                                            <!-- <input name="nombre" placeholder="Escribe tu nombre" required="required" size="8" type="text" /> -->
-                                            <input class="form__dato" name="nombre" placeholder="Escribe tu nombre" required="required" size="8" type="text" />
+                                            <input class="form__dato" name="name" placeholder="Write your name" required="required" size="8" type="text" />
                                         </div>
-                                        <!-- <div class="col-md-6"> -->
                                         <div class="col-md-6 margin__input">
-                                            <!-- <input name="email" placeholder="Email" required="required" size="8" type="email" /> -->
                                             <input class="form__dato" name="email" placeholder="Email" required="required" size="8" type="email" />
                                         </div>
                                     </li>
                                     <li>
-                                        <!-- <div class="col-md-6"> -->
                                         <div class=" col-md-6 margin__input">
-                                            <!-- <input name="telefono" placeholder="Escribe tu numero" required="required" size="8" type="text" /> -->
-                                            <input class="form__dato" name="telefono" placeholder="Escribe tu numero" required="required" size="9" type="tel" />
+                                            <input class="form__dato" name="phone" placeholder="Write your phone number" required="required" size="9" type="tel" />
                                         </div>
-                                        <!-- <div class="col-md-6"> -->
                                         <div class="col-md-6 margin__input">
-                                            <!-- <input name="compañia" placeholder="Companía/Agencia" required="required" size="8" type="text" /> -->
-                                            <input class="form__dato" name="compañia" placeholder="Companía/Agencia" required="required" size="8" type="text" />
+                                            <input class="form__dato" name="company" placeholder="Company/Agency " required="required" size="8" type="text" />
                                         </div>
                                     </li>
                                     <li>
-                                        <!-- <div class="col-md-12"> -->
                                         <div class="col-md-12 margin__input">
-                                            <!-- <input name="asunto" placeholder="Asunto" required="required" size="8" type="text" /> -->
-                                            <input class="form__dato" name="asunto" placeholder="Asunto" required="required" size="8" type="text" />
+                                            <input class="form__dato" name="subject" placeholder="subject" required="required" size="8" type="text" />
                                         </div>
                                     </li>
                                     <li>
-                                        <!-- <div class="col-md-12"> -->
                                         <div class="col-md-12 margin__input">
-                                            <!-- <textarea class="span12" name="mensaje" placeholder="Escribe tu proyecto o mensaje" required="required"></textarea> -->
-                                            <textarea class="form__msg" name="mensaje" placeholder="Escribe tu proyecto o mensaje" required="required"></textarea>
+                                            <textarea class="form__msg" name="message" placeholder="Write your project or message " required="required"></textarea>
                                         </div>
                                     </li>
                                     <li>
-                                        <!-- <div class="col-md-12"> -->
                                         <div class="col-md-12 margin__input">
-                                            <!-- <button type="submit"> -->
                                             <button class="form__btn" type="submit">
-                                                Enviar mensaje
+                                                Send Message
                                                 <i class="fas fa-chevron-right btn__icon"></i>
                                             </button>
                                         </div>
                                     </li>
                                 </ul>
                             </form>
-
                          </div>
                 </div>
 
@@ -287,11 +264,11 @@
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
-                            <li class="redeslist__item">
+                            <!-- <li class="redeslist__item">
                                 <a href="https://mail.google.com/mail/u/0/?fs=1&to=diland0206@gmail.com&tf=cm" target="_blank" class="redeslist__link redeslist__link--gmail">
                                     <i class="fas fa-envelope"></i>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     
@@ -301,6 +278,6 @@
 	</div>
     
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

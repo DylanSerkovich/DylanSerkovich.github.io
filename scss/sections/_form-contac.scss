@@ -25,9 +25,8 @@
     border-top: 0px;
     border-right: 0px;
     border-left: 0px;
-    border-bottom: 3px solid slategrey;
-    background: var(--color-primario);
-    font-family: 'Roboto', sans-serif;
+    border-bottom: 3px solid var(--blue-opuesto);
+    background: none;
     color: var(--color-secundario);
     font-weight: 700;
     font-size: 18px;
@@ -45,9 +44,10 @@
 
 .contact-form ::-webkit-input-placeholder {
     font-size: 12px;
-    color: slategrey;
+    color: var(--color-secundario);
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 900;
+    font-style: italic;
 }
 
 // .contact-form label {
@@ -67,7 +67,7 @@
 
 .form__btn {
     color: var(--color-secundario);
-    background: rgba(34, 34, 34, 0.0);
+    background: transparent;
     border: 3px solid $maize-crayola;
     height: 74px;
     width: 200px;
@@ -86,15 +86,17 @@
     transition: ease-in-out 0.25s;
     font-size: 18px;
     margin-left: 5px;
-    color: $raisin-black;
+    color:var(--color-secundario);
 }
 
 .form__btn:hover {
     background: $maize-crayola;
+    color: $raisin-black
 }
 
 .form__btn:hover .btn__icon {
    margin-left: 15px;
+   color: $raisin-black;
     
 }
 
