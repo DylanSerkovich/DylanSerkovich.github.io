@@ -1,7 +1,11 @@
+import {getSkills} from './firebase.js'
+
 const nav = document.querySelector('.nav'); //nav
 const menu_btn = document.querySelector('.nav__menu'); //boton
 const menu = document.querySelector('.nav__list'); //ul
 const secciones = document.querySelectorAll('section'); //secciones
+
+const skillsContainer = document.getElementById('skillsContainer');
 
 const flagsElement =document.getElementById('flags');
 const textsToChange = document.querySelectorAll("[data-section]");
@@ -110,6 +114,27 @@ document.addEventListener('DOMContentLoaded', function(){
     ThemeOptions[ThemeStatus]();
 
     (!!LanguageStatus)? changeLanguage(LanguageStatus): changeLanguage(LanguageNav);
+});
+
+document.addEventListener('DOMContentLoaded', async() =>{
+    const querySnapshot = await getSkills();
+
+    let html = "";
+
+    querySnapshot.forEach(doc =>{
+        const skill = doc.data();
+        const imgClass = skill.description === "JAVA" ? "skill__logo--java" : "";
+        html += `
+        <div class="skill__item">
+            <div class="skill__img">
+                <img class="skill__logo ${imgClass}" src=${skill.img} alt=${skill.description}>
+            </div>
+            <span class="skill__name">${skill.description} </span>
+        </div>
+        `
+    })
+
+    skillsContainer.innerHTML = html;
 });
 
 
