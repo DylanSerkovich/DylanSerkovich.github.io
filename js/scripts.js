@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <h3 class="card__title-back">${project.reason}</h3>
                         <p  class="project__description">${project.description.en}</p>
                             <div class="card__links">
-                                <form action="${project.demo_url} target="_blank">
+                                <form action=${project.demo_url} target="_blank">
                                     <input class="card__link card__link--demo" type="submit" value="Demo">
                                 </form>
                                 <form action=${project.code_url} target="_blank">
