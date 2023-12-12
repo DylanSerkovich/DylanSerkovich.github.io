@@ -1,16 +1,15 @@
 {
-    "home":{
-        "title":"I'm Dilam Chuquilin",
-        "description":"Student and programmer with a hunger for knowledge and experience, constantly improving my skills with the goal of becoming a Senior developer."
+    "home": {
+        "title": "I'm Dilam Chuquilin",
+        "description": "Student and programmer with a hunger for knowledge and experience, constantly improving my skills with the goal of becoming a Senior developer."
     },
-
-    "about":{
-        "description":"My name is Dilam Anderson, a Systems Engineering student, a Full Stack developer with experience creating websites and desktop applications. I specialize in Java and JavaScript; I also have extensive experience in the area of ​​graphic design and editing.<br> Always in the constant search to polish my skills and continue to grow as a professional to present valuable contributions to the work group of which I am a part.",
+    "about": {
+        "description": "My name is Dilam Anderson, a Systems Engineering student, a Full Stack developer with experience creating websites and desktop applications. I specialize in Java with Spring boot; I also have database experience such as MySQL.<br> Always in the constant search to polish my skills and continue to grow as a professional to present valuable contributions to the work group of which I am a part.",
         "download": "Download"
     },
-    "project":{
-        "title":"Statistical System for a Clothing Company",
+    "project": {
+        "title": "Statistical System for a Clothing Company",
         "reason": "Creaciones Guianella",
-        "description":"This project was created to statistically help a clothing company, allowing it to better manage its resources; It consists of creating a report in HTML to view the results.<br> It is recommended that the report be opened natively on the desktop"
+        "description": "This project was created to statistically help a clothing company, allowing it to better manage its resources; It consists of creating a report in HTML to view the results.<br> It is recommended that the report be opened natively on the desktop"
     }
 }
