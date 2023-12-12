@@ -1,6 +1,6 @@
 // @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-.project{
+.project {
   max-width: 1200px;
   margin: auto;
   perspective: 1000px;
@@ -8,18 +8,18 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  &__item{
+  &__item {
     margin: 20px;
     perspective: 1000px;
 
-    &:hover{
-      & .card{
+    &:hover {
+      & .card {
         transform: rotateY(180deg);
       }
     }
   }
 
-  &__description{
+  &__description {
     margin-top: 30px;
     font-size: 18px;
   }
@@ -27,25 +27,26 @@
 
 .card__title {
   font-size: 2em;
-  &-back{
+
+  &-back {
     font-size: 1.5em;
   }
 }
 
-.card{
+.card {
   width: 350px;
   height: 400px;
   position: relative;
   transform-style: preserve-3d;
   transition: all 600ms;
-  
-  &__img{
+
+  &__img {
     width: 100%;
     height: 100%;
     border-radius: 20px;
   }
 
-  &__side{
+  &__side {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -55,140 +56,111 @@
     transform-style: preserve-3d;
     border-radius: 20px;
 
-      &--front{
-        background-size: cover;
-        background-position: center;
-        box-shadow: 0px 2px 10px 2px rgba(var(--color-secundario-rgb), 0.25);
-        transition: $trans-color;
-      }
-
-      &--back{
-        transform: rotateY(180deg);
-        transition: $trans-color; 
-        /* background: white; */
-
-        &--proyecto-r{
-          background: rgba(52, 52, 53, 1);
-          background: -moz-linear-gradient(
-            top,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(182, 199, 181, 0.76) 100%
-          );
-          background: -webkit-gradient(
-            left top,
-            left bottom,
-            color-stop(0%, rgba(52, 52, 53, 1)),
-            color-stop(0%, rgba(52, 52, 53, 1)),
-            color-stop(100%, rgba(182, 199, 181, 0.76))
-          );
-          background: -webkit-linear-gradient(
-            top,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(182, 199, 181, 0.76) 100%
-          );
-          background: -o-linear-gradient(
-            top,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(182, 199, 181, 0.76) 100%
-          );
-          background: -ms-linear-gradient(
-            top,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(182, 199, 181, 0.76) 100%
-          );
-          background: linear-gradient(
-            to bottom,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(52, 52, 53, 1) 0%,
-            rgba(182, 199, 181, 0.76) 100%
-          );
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343435', endColorstr='#b6c7b5', GradientType=0 );
-          box-shadow: 0px 5px 10px 5px rgba(var(--color-secundario-rgb), 0.25);
-        }
-      }
+    &--front {
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0px 2px 10px 2px rgba(var(--color-secundario-rgb), 0.25);
+      transition: $trans-color;
     }
 
-    &__body{
+    &--back {
+      transform: rotateY(180deg);
+      transition: $trans-color;
+      /* background: white; */
 
-      &-front{
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        padding: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        transform: translateZ(60px);
+      &--proyecto-r {
+        background: rgba(40, 89, 113, 0.94);
+        background: -moz-linear-gradient(top, rgba(40, 89, 113, 0.94) 0%, rgba(58, 58, 59, 0.88) 76%, rgba(244, 255, 253, 0.86) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(40, 89, 113, 0.94)), color-stop(76%, rgba(58, 58, 59, 0.88)), color-stop(100%, rgba(244, 255, 253, 0.86)));
+        background: -webkit-linear-gradient(top, rgba(40, 89, 113, 0.94) 0%, rgba(58, 58, 59, 0.88) 76%, rgba(244, 255, 253, 0.86) 100%);
+        background: -o-linear-gradient(top, rgba(40, 89, 113, 0.94) 0%, rgba(58, 58, 59, 0.88) 76%, rgba(244, 255, 253, 0.86) 100%);
+        background: -ms-linear-gradient(top, rgba(40, 89, 113, 0.94) 0%, rgba(58, 58, 59, 0.88) 76%, rgba(244, 255, 253, 0.86) 100%);
+        background: linear-gradient(to bottom, rgba(40, 89, 113, 0.94) 0%, rgba(58, 58, 59, 0.88) 76%, rgba(244, 255, 253, 0.86) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#285971', endColorstr='#f4fffd', GradientType=0);
       }
-
-      &-back{
-        padding: 40px;
-        text-align: center;
-        transform: translateZ(60px);
-        color: #fff;
-      }
-
     }
+  }
 
-    &__links {
-      position: fixed;
-      align-items: center;
-      top:290px;
-      left: 50%;
-      transform: translate(-50%);
+  &__body {
+
+    &-front {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding: 40px;
+      display: flex;
       justify-content: center;
-      display: flex;  
+      align-items: center;
+      color: #fff;
+      transform: translateZ(60px);
     }
 
-    &__link{
-      margin: 30px 10px 0;
-      padding: 6.5px 30px;
-      font-size: 16px;
-      cursor: pointer;
-      border: 2px $blue-sapphire solid;
-      box-shadow: 1px 1px 30px -5px $dark-sky-blue;
-      border-radius: 10px;
-      transition: all 400ms;
-
-      &--demo{
-        color: $mint-cream;
-        background: $blue-sapphire;
-          &:active{
-            box-shadow: inset 0 0 10px  $blue-sapphire;
-          }
-
-        @media (hover:hover){
-          &:hover{
-            color: $blue-sapphire;
-            font-weight: 900;
-            background:transparent;
-          }
-        }
-        
-      }
-
-      &--code{
-        color: $blue-sapphire;
-        font-weight: 900;
-        background:transparent;
-          &:active{
-            box-shadow: inset 0 0 10px $mint-cream;
-          }
-        @media (hover:hover){
-          &:hover{
-            background-color: $blue-sapphire;
-            font-weight: normal;
-            color: $mint-cream;
-          }
-        }
-      }
-  
+    &-back {
+      padding: 40px;
+      text-align: center;
+      transform: translateZ(60px);
+      color: #fff;
     }
+
+  }
+
+  &__links {
+    position: fixed;
+    align-items: center;
+    top: 290px;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    display: flex;
+  }
+
+  &__link {
+    margin: 30px 10px 0;
+    padding: 6.5px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px $blue-sapphire solid;
+    box-shadow: 1px 1px 30px -5px $dark-sky-blue;
+    border-radius: 10px;
+    transition: all 400ms;
+
+    &--demo {
+      color: $mint-cream;
+      background: $blue-sapphire;
+
+      &:active {
+        box-shadow: inset 0 0 10px $blue-sapphire;
+      }
+
+      @media (hover:hover) {
+        &:hover {
+          color: $blue-sapphire;
+          font-weight: 900;
+          background: transparent;
+        }
+      }
+
+    }
+
+    &--code {
+      color: $blue-sapphire;
+      font-weight: 900;
+      background: transparent;
+
+      &:active {
+        box-shadow: inset 0 0 10px $mint-cream;
+      }
+
+      @media (hover:hover) {
+        &:hover {
+          background-color: $blue-sapphire;
+          font-weight: normal;
+          color: $mint-cream;
+        }
+      }
+    }
+
+  }
 
 }
 
@@ -201,5 +173,3 @@
   background: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
 }
-
-

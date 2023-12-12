@@ -23,3 +23,5 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 export const getSkills = () => getDocs(collection(db,'skills'));
+
+export const getProjects = () => getDocs(collection(db,'projects'));

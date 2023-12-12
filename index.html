@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,101 +35,110 @@
     <meta property="twitter:image" content="assets/images/Foto_dilam.webp">
     <link rel=" shortcut icon" href="assets/icon/logoPaginaWeb.png">
 </head>
+
 <body>
     <section id="home">
-    <header>
-        <nav class="nav">
-            <div class="nav__logo">D'LAN/</div>
-            <div class="nav__theme">
-                <button class="checkTheme" id="checkTheme">
-                    <span class="checkTheme__icon"><i class="fas fa-sun"></i></span>
-                    <span class="checkTheme__icon"><i class="fas fa-moon"></i></span>
-                </button>
-            </div>
-            <div id="flags" class="flags">
-                <div class="flags__item" data-language="es">
-                    <img class="flags__img" src="assets/icon/es.svg" alt="ES">
+        <header>
+            <nav class="nav">
+                <div class="nav__logo">D'LAN/</div>
+                <div class="nav__theme">
+                    <button class="checkTheme" id="checkTheme">
+                        <span class="checkTheme__icon"><i class="fas fa-sun"></i></span>
+                        <span class="checkTheme__icon"><i class="fas fa-moon"></i></span>
+                    </button>
                 </div>
-                <div class="flags__item" data-language="en">
-                    <img class="flags__img" src="assets/icon/en.svg" alt="EN">
+                <div id="flags" class="flags">
+                    <div class="flags__item" data-language="es">
+                        <img class="flags__img" src="assets/icon/es.svg" alt="ES">
+                    </div>
+                    <div class="flags__item" data-language="en">
+                        <img class="flags__img" src="assets/icon/en.svg" alt="EN">
+                    </div>
                 </div>
+                <ul class="nav__list">
+                    <li class="nav__item" data-ref="home">
+                        <a class="nav__link" href="#home"><i class="fas fa-home"></i>Home</a>
+                    </li>
+                    <li class="nav__item" data-ref="about">
+                        <a class="nav__link" href="#about"><i class="fas fa-user"></i>About</a>
+                    </li>
+                    <li class="nav__item" data-ref="skills">
+                        <a class="nav__link" href="#skills"><i class="fas fa-code"></i>Skills</a>
+                    </li>
+                    <li class="nav__item" data-ref="portafolio">
+                        <a class="nav__link" href="#portafolio"><i class="fas fa-code-branch"></i>Portafolio</a>
+                    </li>
+                    <li class="nav__item" data-ref="contact">
+                        <a class="nav__link" href="#contact"><i class="fas fa-mobile-alt"></i>Contact</a>
+                    </li>
+                </ul>
+                <div class="nav__menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+
+            <div class="gridblock sectionHome">
+                <div class="infoHome">
+                    <h1 class="infoHome__title" data-section="home" data-value="title">Soy Dilam Chuquilin</h1>
+                    <p class="paragraph infoHome__description" data-section="home" data-value="description">Student and
+                        programmer with a hunger for knowledge and experience, constantly improving my skills with the
+                        goal of becoming a Senior developer.</p>
+                </div>
+                <img class="sectionHome__Photo" src="assets/images/Foto_dilam.webp" alt="Dilam_Chuquilin">
             </div>
-            <ul class="nav__list">
-                <li class="nav__item" data-ref="home">
-                    <a class="nav__link" href="#home"><i class="fas fa-home"></i>Home</a>
-                </li>
-                <li class="nav__item" data-ref="about">
-                    <a class="nav__link" href="#about"><i class="fas fa-user"></i>About</a>
-                </li>
-                <li class="nav__item" data-ref="skills">
-                    <a class="nav__link" href="#skills"><i class="fas fa-code"></i>Skills</a>
-                </li>
-                <li class="nav__item" data-ref="portafolio">
-                    <a class="nav__link" href="#portafolio"><i class="fas fa-code-branch"></i>Portafolio</a>
-                </li>
-                <li class="nav__item" data-ref="contact">
-                    <a class="nav__link" href="#contact"><i class="fas fa-mobile-alt"></i>Contact</a>
-                </li>
-            </ul>
-            <div class="nav__menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-        
-        <div class="gridblock sectionHome">
-            <div class="infoHome">
-                <h1 class="infoHome__title" data-section="home" data-value="title">Soy Dilam Chuquilin</h1>
-                <p class="paragraph infoHome__description" data-section="home" data-value="description">Student and programmer with a hunger for knowledge and experience, constantly improving my skills with the goal of becoming a Senior developer.</p>
-            </div>
-            <img class="sectionHome__Photo" src="assets/images/Foto_dilam.webp" alt="Dilam_Chuquilin">
-        </div>
-        <div class="sesgoabajo"></div>
-    </header>
-    
+            <div class="sesgoabajo"></div>
+        </header>
+
     </section>
     <main>
-    <div class="secciones">
-		<section class="section" id="about">
-            <h2 class="title about__title">About me</h2>
-            <div class="gridblock about__container">
-                <img class="about__img" src="assets/images/Dilam_about.webp" alt="Dilam_Anderson">
-                <div class=" about__info">
-                    <p class="paragraph about__description" data-section="about" data-value="description">My name is Dilam Anderson, a Systems Engineering student, a Full Stack developer with experience creating websites and desktop applications. I specialize in Java and JavpaScript; I also have extensive experience in the area of ​​graphic design and editing.<br> Always in the constant search to polish my skills and continue to grow as a professional to present valuable contributions to the work group of which I am a part.</p>
-                    <form action="assets/download/CV_Chuquilin_Dilam.pdf" target="_blank">
-                    <button type="submit" class="button">
-                        <i class="fas fa-file-download icon"></i>
-                        <span class="button__description" data-section="about" data-value="download">Download CV</span>
-                    </button> 
-                </form>
+        <div class="secciones">
+            <section class="section" id="about">
+                <h2 class="title about__title">About me</h2>
+                <div class="gridblock about__container">
+                    <img class="about__img" src="assets/images/Dilam_about.webp" alt="Dilam_Anderson">
+                    <div class=" about__info">
+                        <p class="paragraph about__description" data-section="about" data-value="description">My name is
+                            Dilam Anderson, a Systems Engineering student, a Full Stack developer with experience
+                            creating websites and desktop applications. I specialize in Java and JavpaScript; I also
+                            have extensive experience in the area of ​​graphic design and editing.<br> Always in the
+                            constant search to polish my skills and continue to grow as a professional to present
+                            valuable contributions to the work group of which I am a part.</p>
+                        <form action="assets/download/CV_Chuquilin_Dilam.pdf" target="_blank">
+                            <button type="submit" class="button">
+                                <i class="fas fa-file-download icon"></i>
+                                <span class="button__description" data-section="about" data-value="download">Download
+                                    CV</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-		</section>
+            </section>
 
-		<section class="section section--skill" id="skills">
-				<h2 class="title skill__title">Skills</h2>
-				<div id="skillsContainer" class="skill__container">
-                    
+            <section class="section section--skill" id="skills">
+                <h2 class="title skill__title">Skills</h2>
+                <div id="skillsContainer" class="skill__container">
+
                 </div>
-		</section>
+            </section>
 
-		<section class="section" id="portafolio">
-			
-				<h2 class="title ">Portafolio</h2>
-                <div class="project"> 
+            <section class="section" id="portafolio">
 
-                    <div class="project__item">
+                <h2 class="title ">Portafolio</h2>
+                <div class="project" id="projectsContainer">
+
+                    <!-- <div class="project__item">
                         <div class="card">
                             <img class="card__img" src="assets/images/proyecto-r.webp" alt="">
                             <div class="card__side card__side--front">
                                 <div class="bg"></div>
                                 <div class="card__body-front">
-                                    <h3 class="card__title" data-section="skill" data-value="title1">Sistema Estadístico para Empresa de Confección</h3>
+                                    <h3 class="card__title" data-section="project" data-value="title">Sistema Estadístico para Empresa de Confección</h3>
                                 </div>
                             </div>
                             <div class="card__side card__side--back card__side--back--proyecto-r">
                                 <div class="card__body-back">
-                                    <h3 class="card__title-back">Creaciones Guianella</h3>
-                                    <p  class="project__description" data-section="skill" data-value="description1">Este proyecto fue creado para ayudar estadisticamente a una empresa de confección, permitiendo gestionar mejor sus recursos; Consiste en la creación de un informe en HTML para la vizualización de los resultados.<br> Se recomienda que el informe se habra de forma nativa en el escritorio</p>
+                                    <h3 class="card__title-back" data-section="project" data-value="reason">Creaciones Guianella</h3>
+                                    <p  class="project__description" data-section="project" data-value="description">Este proyecto fue creado para ayudar estadisticamente a una empresa de confección, permitiendo gestionar mejor sus recursos; Consiste en la creación de un informe en HTML para la vizualización de los resultados.<br> Se recomienda que el informe se habra de forma nativa en el escritorio</p>
                                         <div class="card__links">
                                             <form action="https://dylanserkovich.github.io/statistical_system/" target="_blank">
                                                 <input class="card__link card__link--demo" type="submit" value="Demo">
@@ -142,55 +152,61 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-        
-                </div>
-			
-		</section>
+                    </div> -->
 
-		<section class="section" id="contact">
+                </div>
+
+            </section>
+
+            <section class="section" id="contact">
                 <div class="form__contact">
                     <h2 class="title skill__title">Contactame</h2>
-                        <div class="col-md-12">
-                            <form id="form" class="formu" method="post" action="https://formspree.io/f/mbjwoyyp">
-                                <ul class="contact-form">
-                                    <li>
-                                        <div class="col-md-6 margin__input">
-                                            <input class="form__dato" name="name" placeholder="Write your name" required="required" size="8" type="text" />
-                                        </div>
-                                        <div class="col-md-6 margin__input">
-                                            <input class="form__dato" name="email" placeholder="Email" required="required" size="8" type="email" />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class=" col-md-6 margin__input">
-                                            <input class="form__dato" name="phone" placeholder="Write your phone number" required="required" size="9" type="tel" />
-                                        </div>
-                                        <div class="col-md-6 margin__input">
-                                            <input class="form__dato" name="company" placeholder="Company/Agency " required="required" size="8" type="text" />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-12 margin__input">
-                                            <input class="form__dato" name="subject" placeholder="subject" required="required" size="8" type="text" />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-12 margin__input">
-                                            <textarea class="form__msg" name="message" placeholder="Write your project or message " required="required"></textarea>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-12 margin__input">
-                                            <button class="form__btn" type="submit">
-                                                Send Message
-                                                <i class="fas fa-chevron-right btn__icon"></i>
-                                            </button>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </form>
-                         </div>
+                    <div class="col-md-12">
+                        <form id="form" class="formu" method="post" action="https://formspree.io/f/mbjwoyyp">
+                            <ul class="contact-form">
+                                <li>
+                                    <div class="col-md-6 margin__input">
+                                        <input class="form__dato" name="name" placeholder="Write your name"
+                                            required="required" size="8" type="text" />
+                                    </div>
+                                    <div class="col-md-6 margin__input">
+                                        <input class="form__dato" name="email" placeholder="Email" required="required"
+                                            size="8" type="email" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class=" col-md-6 margin__input">
+                                        <input class="form__dato" name="phone" placeholder="Write your phone number"
+                                            required="required" size="9" type="tel" />
+                                    </div>
+                                    <div class="col-md-6 margin__input">
+                                        <input class="form__dato" name="company" placeholder="Company/Agency "
+                                            required="required" size="8" type="text" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-12 margin__input">
+                                        <input class="form__dato" name="subject" placeholder="subject"
+                                            required="required" size="8" type="text" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-12 margin__input">
+                                        <textarea class="form__msg" name="message"
+                                            placeholder="Write your project or message " required="required"></textarea>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-12 margin__input">
+                                        <button class="form__btn" type="submit">
+                                            Send Message
+                                            <i class="fas fa-chevron-right btn__icon"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
                 </div>
 
 
@@ -198,7 +214,8 @@
                     <div class="blockContac">
                         <ul class="redeslist">
                             <li class="redeslist__item">
-                                <a href="https://www.facebook.com/dchuquilin" target="_blank" class="redeslist__link redeslist__link--facebook">
+                                <a href="https://www.facebook.com/dchuquilin" target="_blank"
+                                    class="redeslist__link redeslist__link--facebook">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
@@ -213,7 +230,8 @@
                                 </a>
                             </li>
                             <li class="redeslist__item">
-                                <a href="https://www.instagram.com/invites/contact/?i=6pvka2is1quf&utm_content=34marhu" target="_blank" class="redeslist__link redeslist__link--instagram">
+                                <a href="https://www.instagram.com/invites/contact/?i=6pvka2is1quf&utm_content=34marhu"
+                                    target="_blank" class="redeslist__link redeslist__link--instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
@@ -224,13 +242,14 @@
                             </li> -->
                         </ul>
                     </div>
-                    
-                </div>
-		</section>
 
-	</div>
-    
+                </div>
+            </section>
+
+        </div>
+
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>

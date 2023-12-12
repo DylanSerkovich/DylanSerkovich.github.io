@@ -8,8 +8,9 @@
         "description":"Me llamo Dilam Anderson, estudiante de la carrera de Ingeniería de Sistemas, un desarrollador Full Stack con experiencia creando sitios web y aplicaciones de escritorio. Me especializo en Java y JavaScript; tambien tengo amplia experiencia en el área de diseño grafico y edición.<br> Siempre en la constante busqueda de pulir mis habilidades y seguir creciendo como profesional para presentar aportes valiosos en grupo de trabajo del que formo parte",
         "download": "Descargar CV"
     },
-    "skill":{
-        "title1":"Sistema Estadístico para Empresa de Confección",
-        "description1":"Este proyecto fue creado para ayudar estadisticamente a una empresa de confección, permitiendo gestionar mejor sus recursos; Consiste en la creación de un informe en HTML para la vizualización de los resultados.<br> Se recomienda que el informe se habra de forma nativa en el escritorio"
+    "project":{
+        "title":"Sistema Estadístico para Empresa de Confección",
+        "reason": "Creaciones Guianella",
+        "description":"Este proyecto fue creado para ayudar estadisticamente a una empresa de confección, permitiendo gestionar mejor sus recursos; Consiste en la creación de un informe en HTML para la vizualización de los resultados.<br> Se recomienda que el informe se habra de forma nativa en el escritorio"
     }
 }
