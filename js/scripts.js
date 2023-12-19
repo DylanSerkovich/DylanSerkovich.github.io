@@ -1,4 +1,4 @@
-import { getSkills, getProjects } from './firebase.js'
+import { getSkills, getProjects, sendMessage } from './firebase.js'
 
 const nav = document.querySelector('.nav'); //nav
 const menu_btn = document.querySelector('.nav__menu'); //boton
@@ -205,26 +205,36 @@ $form.addEventListener('submit', handleSubmit);
 async function handleSubmit(event) {
     event.preventDefault();
     const form = new FormData(this);
-    const response = await fetch(this.action, {
-        method: this.method,
-        body: form,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    if (response.ok) {
-        this.reset();
-        Swal.fire({
-            toast: true,
-            icon: 'success',
-            iconColor: '#F24236',
-            title: '<center>Mensaje enviado</center><center>¡Le contestaremos pronto!</center>',
-            animation: false,
-            background: '#F3CA40',
-            position: 'top-right',
-            color: '#23272E',
-            showConfirmButton: false,
-            timer: 2500,
-        })
-    }
+    const messageData = {
+        name: form.get('name'),
+        email: form.get('email'),
+        phone: form.get('phone'),
+        company: form.get('company'),
+        subject: form.get('subject'),
+        message: form.get('message')
+    };
+
+    sendMessage(messageData)
+        .then((response) => {
+            if (response.success) {
+                this.reset();
+                Swal.fire({
+                    toast: true,
+                    icon: 'success',
+                    title: '<center>Mensaje enviado</center><center>¡Le contestaremos pronto!</center>',
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                })
+            } else {
+                console.error(response.message);
+            }
+        }).catch((error) => {
+            console.error("Error al enviar el mensaje:", error);
+        });
 }

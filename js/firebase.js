@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 
-import { getFirestore, collection, getDocs} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"
+import { getFirestore, collection, getDocs, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,6 +22,22 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-export const getSkills = () => getDocs(collection(db,'skills'));
+export const getSkills = () => getDocs(collection(db, 'skills'));
 
-export const getProjects = () => getDocs(collection(db,'projects'));
+export const getProjects = () => getDocs(collection(db, 'projects'));
+
+export const sendMessage = async (messageData) => {
+  const message = {
+    ...messageData,
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    await addDoc(collection(db, 'messages'), message);
+    return { success: true, message: "Mensaje enviado con éxito" };
+  } catch (error) {
+    console.error("Error al enviar el mensaje:", error);
+    return { success: false, message: error.message };
+  }
+
+}
